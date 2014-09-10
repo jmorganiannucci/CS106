@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+
+/**
+ * @author JuliaIannucci
+ *
+ */
+public class BMICalculator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// declare variables
+		double height; 
+		double weight;
+		double BMI; 
+		
+		// compute
+		height = 70;
+		weight = 170;
+		bmi = weight / (height * height) * 703;
+		
+		// print results 
+		System.out.println("Current BMI:");
+		System.out.println("bmi");
+	}
+
+}
