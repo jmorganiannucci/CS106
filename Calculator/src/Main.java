@@ -5,7 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in); 
 		System.out.println("Do you want to add or multiply or divide"); 
-		System.out.println("Type 1 to add, type 2 to multiply, 3 to divide!");
+		System.out.println("Type 1 to add, type 2 to multiply, 3 to divide, 4 to subtract!!");
 		int option = in.nextInt();
 		System.out.println(option);
 		
@@ -42,6 +42,12 @@ public class Main {
 				System.out.println(x + "/"+ y + "=" + z);  
 			}
 		
+			if(option == 4){
+				//System.out.println ("I present you with the sum");
+				int z = x - y;  
+				//System.out.println(z);
+				System.out.println(x + "-"+ y + "=" + z);  
+			}
 		
 	
 	}

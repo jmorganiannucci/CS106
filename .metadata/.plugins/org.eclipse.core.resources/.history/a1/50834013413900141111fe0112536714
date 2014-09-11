@@ -1,0 +1,10 @@
+
+public class RowingCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter two of the following: split average, time, or distance.");
+		
+	}
+
+}
