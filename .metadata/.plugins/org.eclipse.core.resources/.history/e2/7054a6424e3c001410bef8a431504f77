@@ -1,21 +1,16 @@
 import java.util.Scanner; //Import scanner library for user input in program 
 public class RowingCalculator {
 	
-	
-	
 	//to createa a new method:
 	//public static returnType name( arguments ){   what your method does   }
 	//return types:
 	//-void:nothing
 	//-int: int
 	//arguments: type of integer, name of integer
-	
-	
-	
 	public static void calculateSplitAverage(Scanner myScanner){ //method one
 
 		System.out.println("What is your time in minutes?");
-		int minutes = myScanner.nextInt(); 		//single = assigns a variable to a value 
+		int minutes = myScanner.nextInt(); //single = assigns a variable to a value 
 		System.out.println("What is your time in seconds?");
 		int seconds = myScanner.nextInt();
 		
@@ -51,8 +46,6 @@ public class RowingCalculator {
 		
 	}
 	
-	
-	
 	public static void calculateTime (Scanner myScanner){ //method two 
 		System.out.println("What is your split average in minutes?"); 
 		int splitMin = myScanner.nextInt(); 
@@ -78,9 +71,6 @@ public class RowingCalculator {
 	}
 	
 
-	
-
-	
 	public static void main(String[] args) { //main method of program (first task that prints in console)
 		// TODO Auto-generated method stub
 		Scanner myScanner = new Scanner(System.in); 
