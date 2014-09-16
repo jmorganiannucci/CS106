@@ -1,4 +1,4 @@
-import java.util.Scanner; //Import scanner library for user input in console for program 
+import java.util.Scanner; //Import scanner library for user input in program 
 public class RowingCalculator {
 	
 	
@@ -7,7 +7,7 @@ public class RowingCalculator {
 	//public static returnType name( arguments ){   what your method does   }
 	//return types:
 	//-void:nothing
-	//-int: int 
+	//-int: int
 	//arguments: type of integer, name of integer
 	
 	
@@ -32,7 +32,7 @@ public class RowingCalculator {
 		
 		//Step 4: need to convert time per 500 meters back into minutes and seconds 
 		int splitInMins = (timePerFive /60); 
-		int splitInSecs = (timePerFive %60);//modulus used for the reamainder 
+		int splitInSecs = (timePerFive %60);
 		System.out.println("I present you with your split average.");
 		if (splitInSecs == 0){ //if split in seconds is equal to a value of zero then a second zero also needs to be printed 
 			System.out.println(splitInMins +":"+ splitInSecs +"0"); //print statement that adds on additional zero 
