@@ -64,7 +64,7 @@ public class RowingCalculator {
 		
 		//step 1: user knows split average and distance, so convert split average (mins and secs) to seconds 
 		int splitAvgInSec = (splitMin * 60) + splitSec ;
-		System.out.println ("Split average in seconds:" +splitAvgInSec );
+		//System.out.println ("Split average in seconds:" +splitAvgInSec );
 		
 		//step 2: find the total time in seconds, simple calculations  
 		int totalTimeInSec = (splitAvgInSec * 4); 
@@ -93,9 +93,7 @@ public class RowingCalculator {
 			calculateSplitAverage(myScanner); //calculateSplitAverage, name for the method with , allows use of scanner in method
 		}
 		if (option == 2){ //enter split average in minutes, then seconds
-			calculateTime(myScanner); //calculateTime, name for the method that contains procedures, allow use of scanner in method
-			
-	
+			calculateTime(myScanner); //calculateTime, name for the method that contains procedures, allow use of scanner in method 
 			
 			
 			

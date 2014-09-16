@@ -3,7 +3,7 @@ public class RowingCalculator {
 	
 	
 	
-	//to create a a new method:
+	//to createa a new method:
 	//public static returnType name( arguments ){   what your method does   }
 	//return types:
 	//-void:nothing
@@ -93,9 +93,7 @@ public class RowingCalculator {
 			calculateSplitAverage(myScanner); //calculateSplitAverage, name for the method with , allows use of scanner in method
 		}
 		if (option == 2){ //enter split average in minutes, then seconds
-			calculateTime(myScanner); //calculateTime, name for the method that contains procedures, allow use of scanner in method
-			
-	
+			calculateTime(myScanner); //calculateTime, name for the method that contains procedures, allow use of scanner in method 
 			
 			
 			
@@ -111,3 +109,4 @@ public class RowingCalculator {
 		
 		
 }
+
