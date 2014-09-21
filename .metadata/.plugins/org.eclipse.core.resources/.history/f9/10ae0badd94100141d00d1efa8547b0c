@@ -37,26 +37,42 @@ public class RowingCalculator {
 		
 		timePrint(splitInMins, splitInSecs);
 		
+		if (splitInSecs == 0){ //if split in seconds is equal to a value of zero then a second zero also needs to be printed 
+			System.out.println(splitInMins +":"+ splitInSecs +"0"); //print statement that adds on additional zero 
+		}	
 		
+		else if(splitInSecs < 10){ 	//unless the seconds value is going to be less than 10 (09,08,07...) 
+									//skip first if, there needs to be a zero in front of the single printed number (2:9 -> 2:09)
+			System.out.println(splitInMins +":0"+ splitInSecs); 
+			
+		}
+		else{ //if the previous if and else if statements are not true they will skip and print regularly without zeros 
+			System.out.println(splitInMins +":"+ splitInSecs);
+			
+		}
 		
 	}
 	
 	//print split 
-	public static void timePrint (int minutes, int seconds){ 
-		if (seconds == 0){ //if split in seconds is equal to a value of zero then a second zero also needs to be printed 
-			System.out.println(minutes +":"+ seconds +"0"); //print statement that adds on additional zero 
+	public static void timePrint (){ 
+		
+		
+		int splitInSecs = 0;
+		String splitInMins = null;
+		if (splitInSecs == 0){ //if split in seconds is equal to a value of zero then a second zero also needs to be printed 
+			System.out.println(splitInMins +":"+ splitInSecs +"0"); //print statement that adds on additional zero 
 		}	
 		
-		else if(seconds < 10){ 	//unless the seconds value is going to be less than 10 (09,08,07...) 
+		else if(splitInSecs < 10){ 	//unless the seconds value is going to be less than 10 (09,08,07...) 
 									//skip first if, there needs to be a zero in front of the single printed number (2:9 -> 2:09)
-			System.out.println(minutes +":0"+ seconds); 
+			System.out.println(splitInMins +":0"+ splitInSecs); 
 			
 		}
 		else{ //if the previous if and else if statements are not true they will skip and print regularly without zeros 
-			System.out.println(minutes +":"+ seconds);
+			System.out.println(splitInMins +":"+ splitInSecs);
 			
 		}
-	
+		return splitInSecs; 
 	}
 		
 	
@@ -82,9 +98,7 @@ public class RowingCalculator {
 		int totalTimeRem = (totalTimeInSec % 60); //using modulus (%) for remainder of seconds 
 		
 		System.out.println("I present you with your time."); //actual printing of statement below 
-		//System.out.println (totalTimeMin+":"+totalTimeRem); 
-		
-		timePrint(totalTimeMin,totalTimeRem); 
+		System.out.println (totalTimeMin+":"+totalTimeRem); 
 	}
 	
 	

@@ -82,9 +82,7 @@ public class RowingCalculator {
 		int totalTimeRem = (totalTimeInSec % 60); //using modulus (%) for remainder of seconds 
 		
 		System.out.println("I present you with your time."); //actual printing of statement below 
-		//System.out.println (totalTimeMin+":"+totalTimeRem); 
-		
-		timePrint(totalTimeMin,totalTimeRem); 
+		System.out.println (totalTimeMin+":"+totalTimeRem); 
 	}
 	
 	
