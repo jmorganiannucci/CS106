@@ -81,7 +81,7 @@ public class SeaCreature {
 		while(true){
 		
 			System.out.println("4. What is your favorite class?");
-			System.out.println("A. Creative Writing B. Math C. History D. Biology");
+			System.out.println("A Creative Writing B Math C History D Biology");
 			
 			//int option = leScanner.nextInt();
 			String answer = leScanner.nextLine(); 
@@ -106,7 +106,7 @@ public class SeaCreature {
 		while(true){
 		
 			System.out.println("5. Which season do you enjoy most?");
-			System.out.println("A. Fall B. Summer C. Winter D. Spring");
+			System.out.println("A Fall B Summer C Winter D Spring");
 			
 			//int option = leScanner.nextInt();
 			String answer = leScanner.nextLine(); 
@@ -131,7 +131,7 @@ public class SeaCreature {
 		while(true){
 		
 			System.out.println("6. What is your favorite food?");
-			System.out.println("A. Salad B. Cheeseburger C. Pasta D. Sushi");
+			System.out.println("A Salad B Cheeseburger C Pasta D Sushi");
 			
 			//int option = leScanner.nextInt();
 			String answer = leScanner.nextLine(); 
@@ -156,7 +156,7 @@ public class SeaCreature {
 		while(true){
 		
 			System.out.println("7. What is your favorite kind of music?");
-			System.out.println("A. Acoustic B. Rock C. Techno D. Jazz");
+			System.out.println("A Acoustic B Rock C Techno D Jazz");
 			
 			//int option = leScanner.nextInt();
 			String answer = leScanner.nextLine(); 
