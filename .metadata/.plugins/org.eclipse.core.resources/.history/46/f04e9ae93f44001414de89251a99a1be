@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class SeaCreature {
+
+	public static void main (String []args) {
+		System.out.println ("What kind of sea creature are you?");
+		System.out.println("Complete this quiz to find out!"); 
+		System.out.println(""); // blank line for aesthetics 
+		System.out.println("1. Where would you want to live?");
+		System.out.println("A. In the mountains B. A city C. The beach D. On a farm");
+	}
+}

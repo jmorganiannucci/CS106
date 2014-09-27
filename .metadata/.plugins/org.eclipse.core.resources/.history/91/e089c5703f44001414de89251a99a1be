@@ -1,0 +1,8 @@
+import java.util.Scanner;
+public class SeaCreature {
+
+	public static void main (String []args) {
+		System.out.println ("What kind of sea creature are you?");
+		System.out.println("Complete this quiz to find out!"); 
+	}
+}

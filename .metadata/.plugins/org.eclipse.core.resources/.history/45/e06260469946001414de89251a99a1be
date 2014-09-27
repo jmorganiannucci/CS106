@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.lang.String;   
+public class SeaCreature {
+
+	public static int q1 (Scanner leScanner) {
+
+		System.out.println("1. Where would you want to live?");
+		System.out.println("A In the mountains B A city C The beach D On a farm");
+		
+		//int option = leScanner.nextInt();
+		String answer = leScanner.nextLine(); 
+		System.out.println(answer); 
+	
+		if (answer.equals("A")){ 
+			return 1;	
+		}
+		if (answer.equals("B")){ 	
+			return 2;	
+		}
+		if (answer.equals("C")){ 	
+			return 3;
+		}
+		if (answer.equals("D")){
+			return 4;	
+			
+		}	
+	}
+	
+	public static void main (String []args) {
+		
+		Scanner leScanner = new Scanner(System.in);
+		
+		int total = 0;
+	 	
+		System.out.println ("What kind of sea creature are you?");
+		System.out.println("Complete this quiz to find out!"); 
+		
+		for(int i = 1; i==10; i+=1){
+			System.out.println("Help me Julia!");
+		}
+
+	}
+	
+}
