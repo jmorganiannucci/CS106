@@ -180,7 +180,7 @@ public class SeaCreature {
 	
 	public static void printCreature(int total) {
 		//System.out.println("This is the total: " + total);
-		System.out.print("You are a: ");
+		System.out.println("You are a: ");
 		
 		if (total <= 11){
 			System.out.println("Turtle!!");

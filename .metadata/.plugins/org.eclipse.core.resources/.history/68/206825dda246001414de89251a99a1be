@@ -179,20 +179,18 @@ public class SeaCreature {
 	}
 	
 	public static void printCreature(int total) {
-		//System.out.println("This is the total: " + total);
-		System.out.print("You are a: ");
-		
+		System.out.println("This is the total: " + total);
 		if (total <= 11){
-			System.out.println("Turtle!!");
+			System.out.println("Turtle");
 		}
 		if (total >= 12 && total <= 16){
-			System.out.println("Seal!!");
+			System.out.println("Seal");
 		}
 		if (total >= 17 && total <= 22){
-			System.out.println("Dolphin!!");
+			System.out.println("Dolphin");
 		}
 		if (total >= 23 && total <= 28){
-			System.out.println("Shark!!");
+			System.out.println("Shark");
 		}
 	}
 	public static void main (String []args) {

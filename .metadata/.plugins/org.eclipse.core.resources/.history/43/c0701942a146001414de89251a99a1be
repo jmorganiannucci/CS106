@@ -177,24 +177,6 @@ public class SeaCreature {
 			System.out.println("Invalid answer, please enter single letter.");
 		}
 	}
-	
-	public static void printCreature(int total) {
-		//System.out.println("This is the total: " + total);
-		System.out.print("You are a: ");
-		
-		if (total <= 11){
-			System.out.println("Turtle!!");
-		}
-		if (total >= 12 && total <= 16){
-			System.out.println("Seal!!");
-		}
-		if (total >= 17 && total <= 22){
-			System.out.println("Dolphin!!");
-		}
-		if (total >= 23 && total <= 28){
-			System.out.println("Shark!!");
-		}
-	}
 	public static void main (String []args) {
 		
 		Scanner leScanner = new Scanner(System.in);
@@ -211,9 +193,9 @@ public class SeaCreature {
 		total += q4(leScanner); 
 		total += q5(leScanner);
 		total += q6(leScanner);
-		total += q7(leScanner);
 
-		printCreature(total);
+		System.out.println("This is the total: " + total); 
+	
 
 	}
 	

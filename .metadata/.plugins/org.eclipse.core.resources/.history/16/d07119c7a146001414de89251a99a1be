@@ -179,23 +179,20 @@ public class SeaCreature {
 	}
 	
 	public static void printCreature(int total) {
-		//System.out.println("This is the total: " + total);
-		System.out.print("You are a: ");
-		
-		if (total <= 11){
-			System.out.println("Turtle!!");
+		if (total >= 11){
+			System.out.println("Turtle");
 		}
-		if (total >= 12 && total <= 16){
-			System.out.println("Seal!!");
+		if (total >= 12 && total >= 16){
+			System.out.println("Seal");
 		}
-		if (total >= 17 && total <= 22){
-			System.out.println("Dolphin!!");
+		if (total >= 17 && total >= 22){
+			System.out.println("Dolphin");
 		}
-		if (total >= 23 && total <= 28){
-			System.out.println("Shark!!");
+		if (total >= 23 && total >= 28){
+			System.out.println("Shark");
 		}
 	}
-	public static void main (String []args) {
+	public static  main (String []args) {
 		
 		Scanner leScanner = new Scanner(System.in);
 		
@@ -213,7 +210,20 @@ public class SeaCreature {
 		total += q6(leScanner);
 		total += q7(leScanner);
 
-		printCreature(total);
+		if (total >= 11){
+			return "Turtle";
+			//System.out.println("Turtle");
+		}
+		if (total >= 12 && total >= 16){
+			System.out.println("Seal");
+		}
+		if (total >= 17 && total >= 22){
+			System.out.println("Dolphin");
+		}
+		if (total >= 23 && total >= 28){
+			System.out.println("Shark");
+		}
+	
 
 	}
 	
