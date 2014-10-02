@@ -1,7 +1,0 @@
-public class SeaCreature {
-
-	public static void main (String []args) {
-		System.out.println ("What kind of sea creature are you?");
-		
-	}
-}
