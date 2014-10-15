@@ -88,8 +88,8 @@ public class SeaCreatureSad {
 	 */
 
 	public static int q1 (Scanner leScanner) { 
-		int returnVal= 0; 
-		while (returnVal == 0){
+		int returnVal= 0; //declaring ints value initially as zero, stores value in method 
+		while (returnVal == 0){ //loop will continue to run 
 		
 		//while(true){ //infinite loop, repeats question until valid answer  
 		
@@ -124,17 +124,17 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;
+		return returnVal; //returnVal value returned to main method
 	}
 	
 	
 	
 	
 	public static int q2 (Scanner leScanner) {
-		int returnVal= 0; 
+		int returnVal= 0; //stores value in method
 		while (returnVal == 0){
 		
-		//while(true){ //infinite loop, repeats question until valid answer  
+		//while(true){ //infinite loop, repeats question until valid answer
 			System.out.println("2. What is your favorite color?");
 			System.out.println("A. Green B. Blue C. Purple D. Red");
 			
@@ -166,7 +166,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;
+		return returnVal; //returnVal value returned to main method
 		}
 	
 	
@@ -209,7 +209,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;
+		return returnVal; //returnVal value returned to main method
 		
 	}
 	
@@ -253,7 +253,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;
+		return returnVal; //returnVal value returned to main method
 	}
 	
 	
@@ -295,7 +295,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;	
+		return returnVal;	//returnVal value returned to main method
 	}
 	
 	
@@ -337,7 +337,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;	
+		return returnVal; //returnVal value returned to main method	
 	}
 	
 	
@@ -379,7 +379,7 @@ public class SeaCreatureSad {
 				//continues to loop until valid
 			}
 		}
-		return returnVal;	
+		return returnVal; //returnVal value returned to main method	
 	}
 	
 	

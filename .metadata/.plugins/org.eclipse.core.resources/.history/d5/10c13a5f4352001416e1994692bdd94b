@@ -1,0 +1,146 @@
+import java.io.*;
+import java.util.*;
+
+public class Finance {
+	
+	
+	public static void main (String [] args) throws FileNotFoundException{
+		BankAccount ba = new BankAccount(); //creating bank account, runs constructor 
+		System.out.println(ba.checking); //prints checking (0)
+		
+		Scanner fileReader = new Scanner(new File("src/input.txt")); //creates scanner referencing to input.txt
+
+		while (fileReader.hasNextLine()) { //allows program to run until no more lines in input.txt
+			processLine(fileReader.nextLine(),ba); //file reader gets line from input and calls process line function 
+		}
+		System.out.println(ba.credit);
+		
+	}	
+	
+	
+	public static void doWork(BankAccount ba, String account, String action, Double amount){
+		//need: the bankaccount, account, action, amount
+		if(account.equals("Checking")){
+			if(action.equals("Withdrawal")){
+				ba.checking = ba.checking - amount;
+			}
+			else if(action.equals("Deposit")){
+				ba.checking = ba.checking + amount;
+			}
+			else if(action.equals("Opening")){
+				ba.checking = amount;
+			}
+		}
+		else if(account.equals("Savings")){
+			if(action.equals("Withdrawal")){
+				ba.savings = ba.savings - amount;
+			}
+			else if(action.equals("Deposit")){
+				ba.savings = ba.savings + amount;
+			}
+			else if(action.equals("Opening")){
+				ba.savings = amount;
+			}
+		}
+		else if(account.equals("Credit")){
+			if(action.equals("Withdrawal")){
+				ba.credit = ba.credit - amount;
+			}
+			else if(action.equals("Deposit")){
+				ba.credit = ba.credit + amount;
+			}
+			else if(action.equals("Opening")){
+				ba.credit = amount;
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void processLine(String line, BankAccount bals){ 
+		//System.out.println(line); //prints input 
+		System.out.println("========================================");
+		Scanner lineProcessor = new Scanner (line);
+		
+		String skip = "";
+		
+		String account = "";
+		String action = "";
+		Double amount = 0.0;
+		
+		skip = lineProcessor.next();	//date, don't need it
+		System.out.println(skip);
+		
+		//first objective: which account is it coming from, checking, savings, cc
+		//second objective: figure out if withdrawl or deposit, opening bal 
+		//third objective: figure out amount to withdraw/ deposit / set opening 
+		
+		account = lineProcessor.next();	//checking/saving/credit
+		System.out.println(account);
+		
+		if(account.equals("Checking")){
+			action = lineProcessor.next();	//withdrawal/deposit/opening
+			System.out.println(action);
+			
+			if(action.equals ("Opening")){
+				skip = lineProcessor.next();	//balance, don't need it
+				System.out.println(skip);
+			}
+			
+			amount = lineProcessor.nextDouble();
+			System.out.println(amount);
+			
+			//good to go
+			doWork(ba, account, action, amount);
+			
+		}
+		else if(account.equals("Savings")){
+			action = lineProcessor.next();	//withdrawal/deposit/opening
+			System.out.println(action);
+			
+			if(action.equals ("Opening")){
+				skip = lineProcessor.next();	//balance, don't need it
+				System.out.println(skip);
+			}
+			
+			amount = lineProcessor.nextDouble();
+			System.out.println(amount);
+			
+			//good to go
+			
+		}
+		else if(account.equals("Credit")){
+			skip = lineProcessor.next();
+			//System.out.println(skip);	//"card", dont need it
+			
+			action = lineProcessor.next();	//withdrawal/deposit/opening
+			System.out.println(action);
+			
+			if(action.equals ("Opening")){
+				skip = lineProcessor.next();	//balance, don't need it
+				System.out.println(skip);
+			}
+			
+			amount = lineProcessor.nextDouble();
+			System.out.println(amount);
+			
+			//good to go
+			
+		}
+		
+		
+		
+		
+	  
+	}
+	
+}
+
+
+
+
