@@ -1,0 +1,18 @@
+
+public class Boat {
+	
+	Time[] raceTimes;
+	int raceTimesSize;
+	
+	public void print(){
+		for(int i = 0; i <raceTimesSize; i++){
+			
+		}
+		
+		
+	}
+	
+	public Boat(){
+		
+	}
+}

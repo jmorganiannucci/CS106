@@ -1,0 +1,233 @@
+import java.io.*;
+import java.util.*;
+
+/** 
+ * 
+ * @author JuliaIannucci
+ * 
+ */
+
+public class Team {
+	String name; // name of team 
+	Boat[] boats; //array of boats, list of boats represented in an array 
+	int boatsSize; //number of boats on the team 
+	
+	Boat bestAveTime = null; //boat with the best average time 
+	Boat worstAveTime = null; //boat with the worst average time 
+	
+	Boat bestPR = null; //boat with the best PR
+	Boat worstPR = null; //boat with the worst PR
+
+/**
+ * @param none 
+ * 
+ * @return void 
+ * reads in the input file token by token 
+ * creates a boat for each boat 	
+ */
+	
+	public void readInData(){ //method that pulls input from file 
+		try { //instead of throwing an exception, exception that its catching is file not found
+			  //you dont want your program to crash if it cant find the file 
+			Scanner fileReader = new Scanner(new File("src/input.txt"));
+			int boatCounter = 0;
+			int numRaces = 0;
+			String skip;
+			while (fileReader.hasNext()) {
+				String token = fileReader.next();
+				
+				if(token.equals("Team:")){
+					name = fileReader.next();
+				}
+				if(token.equals("NumBoats:")){
+					int numBoats = Integer.parseInt(fileReader.next());
+					boats = new Boat[numBoats];
+				}
+				if(token.equals("NumRaces:")){
+					numRaces = Integer.parseInt(fileReader.next());
+				}
+				if(token.equals("Boat")){
+					skip = fileReader.next();	//skip the number of the boat
+					Boat temp = new Boat();
+					temp.raceTimesSize = numRaces;
+					temp.raceTimes = new Time[numRaces];
+					temp.boatNumber = boatCounter+1;
+					for(int i = 0; i < numRaces; i++){
+						
+						skip = fileReader.next();	//skip "Race"
+						skip = fileReader.next();	//skip race number
+						String raceTime = fileReader.next();
+						int mins = Integer.parseInt(raceTime.split(":")[0]);
+						int secs = Integer.parseInt(raceTime.split(":")[1]);
+						temp.raceTimes[i] = new Time(mins, secs);
+					}
+					boats[boatCounter] = temp;
+					
+					boatCounter++;
+				}
+				
+				
+			}
+		boatsSize = boatCounter;
+		
+		
+		
+		
+		} catch (FileNotFoundException e) { 
+			System.out.println("Could not find input file");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	/** 
+	 * @param none  
+	 * 
+	 * @return void 
+	 * print to help me code 
+	 */
+	public void print(){
+		for(int i = 0; i < boatsSize; i++){
+			boats[i].print();	
+		}
+		
+	}
+	
+	/**
+	 * @param none 
+	 * 
+	 * @return void 
+	 * formula to compute the boat average times
+	 * finds best and worst average 
+	 * formula to compute best time for boats 
+	 * 	finds best and worst person records 
+	 */
+	public void parse(){
+		//compute all averages
+		for(int i = 0; i < boatsSize;i++){
+			int totalTime = 0;
+			//loop through all races of a boat
+			for(int j = 0; j < boats[i].raceTimesSize; j++){
+				totalTime += boats[i].raceTimes[j].totalTimeSec();
+			}
+			Time ave = new Time(totalTime/boats[i].raceTimesSize);
+			boats[i].aveTime = ave;
+		}
+		
+		int max = -999999;
+		int min = 999999;
+		
+		int maxIndex = -1;
+		int minIndex = -1;
+		
+		for(int i = 0; i < boatsSize; i++){
+			if(max < boats[i].aveTime.totalTimeSec()){
+				max = boats[i].aveTime.totalTimeSec();
+				maxIndex = i;
+			}
+			if(min > boats[i].aveTime.totalTimeSec()){
+				min = boats[i].aveTime.totalTimeSec();
+				minIndex = i;
+			}
+		}
+		
+		bestAveTime = boats[minIndex];
+		worstAveTime = boats[maxIndex];
+		
+		
+		
+		
+		for(int i = 0; i < boatsSize;i++){
+			min = 999999;
+			minIndex = -1;
+			//loop through all races of a boat
+			for(int j = 0; j < boats[i].raceTimesSize; j++){
+				if(min > boats[i].raceTimes[j].totalTimeSec()){
+					min = boats[i].raceTimes[j].totalTimeSec();
+					minIndex = j;
+				}
+			}
+			boats[i].PR = boats[i].raceTimes[minIndex];
+		}
+		
+		
+		max = -999999;
+		min = 999999;
+		
+		maxIndex = -1;
+		minIndex = -1;
+		
+		for(int i = 0; i < boatsSize; i++){
+			if(max < boats[i].PR.totalTimeSec()){
+				max = boats[i].PR.totalTimeSec();
+				maxIndex = i;
+			}
+			if(min > boats[i].PR.totalTimeSec()){
+				min = boats[i].PR.totalTimeSec();
+				minIndex = i;
+			}
+		}
+		
+		bestPR = boats[minIndex];
+		worstPR = boats[maxIndex];
+		
+		
+		
+	}
+	
+	/**
+	 * @param none 
+	 * 
+	 * @return void 
+	 * print functions 
+	 * 	prints boats with worst and best times 
+	 * 	prints boats with best and worst personal records 
+	 */
+	
+	public void printOutAnalysis(){
+		System.out.println("Best Average Time:");
+		System.out.print("\t");
+		bestAveTime.print();
+		System.out.print("\tWith an Average Time of ");
+		bestAveTime.aveTime.print();
+		System.out.println();
+		
+		System.out.println("Best Personal Record:");
+		System.out.print("\t");
+		bestPR.print();
+		System.out.print("\tWith a record of ");
+		bestPR.PR.print();
+		System.out.println();
+		
+		
+		
+		
+		
+		System.out.println("Worst Average Time:");
+		System.out.print("\t");
+		worstAveTime.print();
+		System.out.print("\tWith an Average Time of ");
+		worstAveTime.aveTime.print();
+		System.out.println();
+		
+		System.out.println("Worst Personal Record:");
+		System.out.print("\t");
+		worstPR.print();
+		System.out.print("\tWith a record of ");
+		worstPR.PR.print();
+		System.out.println();
+		
+		
+	}
+	/** 
+	 * @param none 
+	 * 
+	 * @return void 
+	 * constructor 
+	 */
+	public Team(){
+		
+	}
+}

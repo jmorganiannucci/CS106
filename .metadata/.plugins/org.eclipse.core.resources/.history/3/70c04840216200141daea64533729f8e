@@ -1,0 +1,9 @@
+
+public class Boat {
+	
+	Time[] raceTimes;
+	int raceTimesSize;
+	public Boat(){
+		
+	}
+}

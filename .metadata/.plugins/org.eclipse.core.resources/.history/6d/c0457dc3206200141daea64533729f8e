@@ -1,0 +1,9 @@
+
+public class RowingRaces {
+	
+	public static void main (String [] args){
+		Team myTeam = new Team();
+		myTeam.readInData();
+		System.out.println("Done");
+	}
+}

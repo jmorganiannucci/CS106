@@ -1,0 +1,21 @@
+
+public class Time {
+	int minutes;
+	int seconds;
+	
+	public void print(){
+		System.out.print(minutes+":"+seconds);
+	}
+	
+	public int totalTimeSec(){
+		
+		
+	}
+	
+	
+	public Time(int mins, int sec){ 
+		minutes = mins;
+		seconds = sec;
+	}
+	
+}

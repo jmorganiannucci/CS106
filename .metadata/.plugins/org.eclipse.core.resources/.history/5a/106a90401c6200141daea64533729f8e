@@ -1,0 +1,11 @@
+
+public class Time {
+	int minutes_;
+	int seconds_;
+	public BankAccount(){ 
+		checking= 0.0; //set initial values for finance 
+		savings= 0.0; //set initial values for finance
+		credit= 0.0;  //set initial values for finance
+	}
+	
+}

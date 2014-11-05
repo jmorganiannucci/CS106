@@ -1,0 +1,15 @@
+
+public class Time {
+	int minutes;
+	int seconds;
+	
+	public void print(){
+		
+	}
+	
+	public Time(int mins, int sec){ 
+		minutes = mins;
+		seconds = sec;
+	}
+	
+}

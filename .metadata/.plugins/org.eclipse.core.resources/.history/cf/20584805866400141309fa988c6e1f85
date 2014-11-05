@@ -1,0 +1,21 @@
+
+public class RowingRaces {
+
+/** 
+ * 	
+ * @param args
+ * 
+ * @return 
+ * 
+ */
+	
+	public static void main (String [] args){
+		//System.out.println("Hello World! :)");
+		Team myTeam = new Team(); //creates a new team 
+		myTeam.readInData(); //call the function to read input 
+		//myTeam.print();
+		myTeam.parse(); // parse input (take a sentence and describe its different parts)
+		myTeam.printOutAnalysis(); //print out results 
+		//System.out.println("Done");
+	}
+}

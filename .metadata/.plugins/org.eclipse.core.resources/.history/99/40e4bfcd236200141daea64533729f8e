@@ -1,0 +1,11 @@
+
+public class RowingRaces {
+	
+	public static void main (String [] args){
+		System.out.println("Hello World! :)");
+		Team myTeam = new Team();
+		myTeam.readInData();
+		myTeam.print();
+		System.out.println("Done");
+	}
+}

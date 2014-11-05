@@ -1,0 +1,17 @@
+
+public class Boat {
+	
+	Time[] raceTimes;
+	int raceTimesSize;
+	
+	public void print(int n){
+		System.out.println("Boat "+n+":");
+		for(int i = 0; i <raceTimesSize; i++){
+			System.out.print("Race "+(i+1)+": ");
+		}
+	}
+	
+	public Boat(){
+		
+	}
+}
