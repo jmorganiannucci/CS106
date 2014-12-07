@@ -1,0 +1,24 @@
+
+public class PrintNumbers {
+
+	public static void main(String[] args) {
+	countUp(10); 
+	}
+	
+	public static void countUp(int x){
+		if (x > 0){
+		countUp(x-1); //wont print zero
+		System.out.println(x);
+		
+		}
+		
+	}
+	
+	public static int countSum (int x){
+		
+	}
+	
+	public static void fibonacci (int current, int next, int max) {
+		if (next < max) {
+	}
+}

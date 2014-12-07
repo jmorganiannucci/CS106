@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+
+public class Ecosystem {
+	
+	//constructor
+	Ecosystem(){
+		arr_ = new ArrayList<Integer>();
+	}
+	
+	void addSpecies(Species s){
+		arr_.add(s);
+	}
+	
+	void printData(){
+	}
+	
+	
+	
+	//member variables
+	ArrayList arr_;
+}

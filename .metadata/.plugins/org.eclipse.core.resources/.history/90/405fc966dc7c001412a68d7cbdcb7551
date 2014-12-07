@@ -1,0 +1,56 @@
+
+
+public class Species {
+	Species(String name, int pop, String prey, int cons, int repr){
+		name_ = name;
+		pop_ = pop;
+		prey_ = prey;
+		cons_ = cons;
+		repr_ = repr;
+	}
+	
+	String getName(){
+		return name_;
+	}
+	
+	int eat(Species prey){	//returns how many are eaten
+		if(!prey.name_.equals(prey)){
+			return 0;
+		}
+		int numFullOrg = 0;
+		while(prey.pop_ > cons_ && numFullOrg<pop_){
+			
+			numFullOrg++;
+		}
+		
+		
+	}
+	
+	void die(int deaths){  //kill off "deaths" number of organisms
+		pop_-=deaths;
+		if(pop_<0){
+			pop_=0;
+		}
+	}
+	
+	Boolean canReproduce(){
+		if(pop_ > 0){
+			return true;
+		}
+		return false;
+	}
+	
+	void reproduce(){
+		if(canReproduce()){
+			pop_+=repr_;
+		}
+	}
+	
+	
+	String name_;	//species name
+	int pop_;		//population
+	String prey_;	//prey
+	int cons_; 		//amount of consumption
+	int repr_;		//amount of reproduction
+	
+}

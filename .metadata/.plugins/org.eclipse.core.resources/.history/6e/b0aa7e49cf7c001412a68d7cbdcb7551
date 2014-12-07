@@ -1,0 +1,8 @@
+
+
+public class Species {
+
+	
+	int population;
+	Species prey;
+}

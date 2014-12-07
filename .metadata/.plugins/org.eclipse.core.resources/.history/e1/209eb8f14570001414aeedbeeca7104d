@@ -1,0 +1,15 @@
+
+public class PrintNumbers {
+
+	public static void main(String[] args) {
+		System.out.println(sumOfSquares(7));
+	
+		
+	}
+
+	private static char[] sumOfSquares(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

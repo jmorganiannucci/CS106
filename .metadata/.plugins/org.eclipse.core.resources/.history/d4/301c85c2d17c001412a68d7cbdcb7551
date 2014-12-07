@@ -1,0 +1,11 @@
+Name:			Intial Population:			Prey:			# Prey Consumer per Month:		# Reproductions per Month:
+Plankton		100000						-				-								100000
+Krill			1000						Plankton		100								1000
+Shrimp	
+Crab			10							Krill			20								5
+Hermit_Crab		20							Krill			40								30
+Clam			15							Plankton		100								10
+Starfish		4							Clam			10								
+Horseshoe_Crab
+		
+Pelican			2

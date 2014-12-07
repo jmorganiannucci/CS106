@@ -1,0 +1,29 @@
+
+
+public class Species {
+	Species(String name, int pop, String prey, int cons, int repr){
+		name_ = name;
+		pop_ = pop;
+		prey_ = prey;
+		cons_ = cons;
+		repr_ = repr;
+	}
+	
+	String getName(){
+		return name_;
+	}
+	
+	
+	void reproduce(){
+		
+		
+	}
+	
+	
+	String name_;	//species name
+	int pop_;		//population
+	String prey_;	//prey
+	int cons_; 		//amount of consumption
+	int repr_;		//amount of reproduction
+	
+}

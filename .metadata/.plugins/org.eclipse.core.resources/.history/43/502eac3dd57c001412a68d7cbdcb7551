@@ -1,0 +1,14 @@
+
+
+public class Species {
+	Species(String name){
+		
+		
+	}
+	
+	
+	
+	String name_;
+	int population;
+	Species prey;
+}

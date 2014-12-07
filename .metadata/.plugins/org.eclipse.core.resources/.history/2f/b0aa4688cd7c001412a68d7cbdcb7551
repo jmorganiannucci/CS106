@@ -1,0 +1,22 @@
+package arrays;
+
+import java.util.ArrayList;
+
+
+public class test {
+	public static void main(String args[]){
+		System.out.println("Hello World!");
+		
+		ArrayList arr = new ArrayList<Integer>();
+		
+		System.out.println("size: "+arr.size());
+		
+		arr.add(100);
+		
+		
+		System.out.println("size: "+arr.size());
+		
+		System.out.println("first element of list: " + arr.get(0));
+		
+	}
+}

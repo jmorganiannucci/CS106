@@ -1,0 +1,12 @@
+
+public class PrintNumbers {
+
+	public static void main(String[] args) {
+		int myIntegerName;
+	}
+}
+	public static void recursion(int){
+	
+		
+	}
+}

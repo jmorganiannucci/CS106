@@ -1,0 +1,38 @@
+package arrays;
+
+import java.util.ArrayList;
+
+
+public class test {
+	public static void main(String args[]){
+		System.out.println("Hello World!");
+		
+		ArrayList arr = new ArrayList<Integer>();
+		
+		System.out.println("size: "+arr.size());
+		
+		arr.add(100);
+		arr.add(101);
+		arr.add(102);
+		arr.add(103);
+		arr.add(104);
+		arr.add(105);
+		arr.add(106);
+		arr.add(107);
+		arr.add(108);
+		arr.add(109);
+		arr.add(110);
+		
+		System.out.println("size: "+arr.size());
+		
+		System.out.println("first element of list: " + arr.get(0));
+		System.out.println("second element of list: " + arr.get(1));
+		System.out.println("third element of list: " + arr.get(2));
+		System.out.println("fourth element of list: " + arr.get(3));
+		System.out.println("first element of list: " + arr.get(4));
+		System.out.println("first element of list: " + arr.get(5));
+		System.out.println("first element of list: " + arr.get(6));
+		System.out.println("first element of list: " + arr.get(7));
+		
+	}
+}

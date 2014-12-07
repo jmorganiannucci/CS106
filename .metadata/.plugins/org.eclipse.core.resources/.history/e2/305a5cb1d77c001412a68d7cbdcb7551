@@ -1,0 +1,27 @@
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+
+public class Ecosystem {
+	
+	void addSpecies(Species s){
+		arr_.add(s);
+	}
+	
+	void nextMonth(){
+		month_++;
+	}
+	
+	void printData(PrintWriter writer){
+		writer.println("===============Month: "+ month_ +"===============");
+		for(int i = 0; i < arr_.size(); i++){
+			writer.println("\t"+arr_.get(i).name_+" : "+arr_.get(i));
+		}
+	}
+	
+	
+	
+	//member variables
+	int month_;
+	ArrayList arr_ = new ArrayList<Species>();;
+}

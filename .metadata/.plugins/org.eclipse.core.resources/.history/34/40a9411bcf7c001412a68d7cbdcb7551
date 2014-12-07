@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+
+public class Ecosystem {
+	//constructor
+	Ecosystem(){
+		arr = new ArrayList<Integer>();
+	}
+	
+	
+	ArrayList arr;
+}

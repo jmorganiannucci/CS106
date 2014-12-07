@@ -1,0 +1,39 @@
+package arrays;
+
+import java.util.ArrayList;
+
+
+public class test {
+	public static void main(String args[]){
+		System.out.println("Hello World!");
+		
+		ArrayList arr = new ArrayList<Integer>();
+		
+		System.out.println("size: "+arr.size());
+		
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		arr.add(12);
+		
+		
+		System.out.println("size: "+arr.size());
+		
+	}
+}
